@@ -1,0 +1,59 @@
+@import "./color_palette";
+@import "./functions";
+
+// Color Classes
+@if $md-generate-color-classes == true {
+  @each $color_name, $color in $colors {
+    @each $color_type, $color_value in $color {
+      @if $color_type == "500" {
+        // Background
+        .#{$color_name} {
+          background-color: $color_value !important;
+        }
+
+        // Text
+        .#{$color_name}-text {
+          color: $color_value !important;
+        }
+      }
+
+      @else if $color_name != "shades" {
+        .#{$color_name}-#{$color_type} {
+          background-color: $color_value !important;
+        }
+
+        .#{$color_name}-text.#{$color_type} {
+          color: $color_value !important;
+        }
+      }
+    }
+  }
+
+  // Shade classes
+  @each $color, $color_value in $shades {
+    .#{$color} {
+      background-color: $color_value !important;
+    }
+
+    .#{$color}-text {
+      color: $color_value !important;
+    }
+  }
+}
+
+// Primary and accent
+.primary {
+  background-color: $md-color-primary !important;
+
+  &-text {
+    color: $md-color-primary !important;
+  }
+}
+
+.secondary {
+  background-color: $md-color-secondary !important;
+
+  &-text {
+    color: $md-color-secondary !important;
+  }
+}

@@ -1,0 +1,23 @@
+// Variables
+// ===============================
+// 1. Colors
+// 2. Theming
+
+// Colors
+// ==========================================================================
+
+@import "./style/color/functions";
+
+// Theming
+// ==========================================================================
+
+$md-color-primary: md-color("indigo", "500") !default;
+$md-color-primary-light: lighten($md-color-primary, 14%) !default;
+$md-color-primary-dark: darken($md-color-primary, 14%) !default;
+
+$md-color-secondary: md-color("pink", "A200") !default;
+$md-color-secondary-light: lighten($md-color-primary, 14%) !default;
+$md-color-secondary-dark: darken($md-color-primary, 14%) !default;
+
+// Generate classes. We recommend to turn this setting **off** in production!
+$md-generate-color-classes: true !default;
