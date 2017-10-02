@@ -1,0 +1,16 @@
+@import "./values";
+
+@mixin md-shadow($z-value) {
+  @if type-of($z-value) != number or not unitless($z-value) {
+    @error "$z-value must be a unitless number";
+  }
+
+  @if $z-value < 0 or $z-value > 24 {
+    @error "$z-value must be between 0 and 24";
+  }
+
+  box-shadow:
+    #{"#{map-get($md-shadow-umbra-values, $z-value)} #{$md-shadow-umbra-color}"},
+    #{"#{map-get($md-shadow-penumbra-values, $z-value)} #{$md-shadow-penumbra-color}"},
+    #{map-get($md-shadow-ambient-values, $z-value)} $md-shadow-ambient-color;
+}

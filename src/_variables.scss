@@ -2,6 +2,7 @@
 // ===============================
 // 1. Colors
 // 2. Theming
+// 3. Shadow
 
 // Colors
 // ==========================================================================
@@ -21,3 +22,11 @@ $md-color-secondary-dark: darken($md-color-primary, 14%) !default;
 
 // Generate classes. We recommend to turn this setting **off** in production!
 $md-generate-color-classes: true !default;
+
+// Shadow
+// ==========================================================================
+
+$md-shadow-umbra-color: rgba(0, 0, 0, .2) !default;
+$md-shadow-penumbra-color: rgba(0, 0, 0, .14) !default;
+$md-shadow-ambient-color: rgba(0, 0, 0, .12) !default;
+
