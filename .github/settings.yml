@@ -45,15 +45,19 @@ labels:
   - name: Accessibility
     color: 5319E7
   - name: bug
-    color: ee0701
+    color: EE0701
+  - name: CSS
+    color: 0052CC
   - name: Discussion
     color: 69F0AE
   - name: Documentation
     color: 0088CC
-  - name: Feature
+  - name: New feature
+    color: 4BB14B
+  - name: New component
     color: 4BB14B
   - name: Hacktoberfest
-    color: d93f0b
+    color: D93F0B
   - name: has-fix
     color: 777777
   - name: has-pr
@@ -62,6 +66,8 @@ labels:
     color: 128A0C
   - name: Infrastructure
     color: 000000
+  - name: JavaScript
+    color: F0DB4F
   - name: meta
     color: 000000
   - name: needs-review
