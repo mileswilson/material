@@ -10,6 +10,7 @@ rules:
   number-leading-zero: never
   selector-max-id: 0
   selector-list-comma-newline-after: always-multi-line
+
   # Fonts
   font-family-name-quotes: always-where-recommended
   font-weight-notation: named-where-possible
