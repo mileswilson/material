@@ -5,7 +5,7 @@ repository:
   name: material
 
   # A short description of the repository that will show up on GitHub
-  description: Simple Material Design components for the web. No deep shit!
+  description: Simple Material Design components for the web.
 
   # A URL with more information about the repository
   homepage:
