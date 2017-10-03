@@ -80,10 +80,47 @@ gulp.task('compile:sass', () => {
     .pipe(size({title: 'Total size of styles:'}));
 });
 
+// ==================================== //
+// =========== Script tasks =========== //
+// ==================================== //
+
+gulp.task('lint:js', () => {
+  const jshint = require('gulp-jshint');
+
+  return gulp.src('src/**/*.scss')
+  .pipe(jshint())
+  .pipe(jshint.reporter('default'));
+});
+
+gulp.task('compile:js', () => {
+  const sourcemaps = require('gulp-sourcemaps');
+  const babel = require('gulp-babel');
+  const concat = require('gulp-concat');
+  const uglify = require('gulp-uglify');
+  const header = require('gulp-header');
+  const size = require('gulp-size');
+
+  return gulp.src('src/**/*.js')
+    // Generate Source Maps
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    // Concatenate scripts
+    .pipe(concat('material.js'))
+    .pipe(header(banner, {pkg}))
+    .pipe(gulp.dest('./dist/js'))
+    // Minify scripts
+    .pipe(concat('material.min.js'))
+    .pipe(uglify())
+    .pipe(header(banner, {pkg}))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(size({title: 'Total size of scripts:'}));
+});
+
 // **** Tasks ***** //
 
 gulp.task('default', () => {
   gulp.watch(['src/**/*.{scss,css}'], ['compile:sass', 'lint:sass']);
 });
 
-gulp.task('build', ['compile:sass']);
+gulp.task('build', ['compile:js', 'compile:sass']);
