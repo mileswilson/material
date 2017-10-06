@@ -7,11 +7,11 @@
 }
 
 @each $style in map-keys($md-typography-styles) {
-  .md-typography-#{$style} {
+  .#{$style} {
     @include md-typography($style);
   }
 }
 
-.md-typography-truncate {
+.truncate {
   @include md-typography-truncate;
 }
