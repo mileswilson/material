@@ -3,14 +3,14 @@
 // 1. Colors
 // 2. Theming
 // 3. Typography
-// 4. Shadow
+// 4. Elevation
 
-// Colors
+// 1. Colors
 // ==========================================================================
 
 @import "./style/color/functions";
 
-// Theming
+// 2. Theming
 // ==========================================================================
 
 $md-color-primary: md-color("indigo", "500") !default;
@@ -24,7 +24,7 @@ $md-color-secondary-dark: darken($md-color-primary, 14%) !default;
 // Generate classes. We recommend to turn this setting **off** in production!
 $md-generate-color-classes: true !default;
 
-// Typography
+// 3. Typography
 // ==========================================================================
 
 /* TODO(tomscholz): Move to theming section */
@@ -159,10 +159,12 @@ $md-typography-styles: (
 // It is strongly recommended you leave this as true.
 $md-typography-override-browser: true !default;
 
-// Shadow
+// 4. Elevation
 // ==========================================================================
 
-$md-shadow-umbra-color: rgba(0, 0, 0, .2) !default;
-$md-shadow-penumbra-color: rgba(0, 0, 0, .14) !default;
-$md-shadow-ambient-color: rgba(0, 0, 0, .12) !default;
+$md-elevation-umbra-color: rgba(0, 0, 0, .2) !default;
+$md-elevation-penumbra-color: rgba(0, 0, 0, .14) !default;
+$md-elevation-ambient-color: rgba(0, 0, 0, .12) !default;
+// ==========================================================================
+
 
