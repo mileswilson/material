@@ -1,4 +1,5 @@
 # Typography
+Too many type sizes and styles at once can wreck any layout. A typographic scale has a limited set of type sizes that work well together along with the layout grid.
 
 * Display 4
 * Display 3
