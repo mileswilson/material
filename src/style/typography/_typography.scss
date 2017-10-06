@@ -1,0 +1,17 @@
+// Typography
+@import "./mixins";
+@import "./overrides";
+
+.md-typography {
+  @include md-typography-base;
+}
+
+@each $style in map-keys($md-typography-styles) {
+  .#{$style} {
+    @include md-typography($style);
+  }
+}
+
+.truncate {
+  @include md-typography-truncate;
+}

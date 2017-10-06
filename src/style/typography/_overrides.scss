@@ -1,0 +1,98 @@
+@if $md-typography-override-browser == true {
+  html, body {
+    font-family: $md-typography-font-family;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+  }
+
+  /*
+  * Styles for HTML elements
+  */
+
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    @include md-typography(display3);
+
+    font-size: .6em;
+  }
+
+  h1 {
+    @include md-typography(display3);
+
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    @include md-typography(display2);
+
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    @include md-typography(display1);
+
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  h4 {
+    @include md-typography(headline);
+
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  h5 {
+    @include md-typography(title);
+
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  h6 {
+    @include md-typography(subheading2);
+
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    @include md-typography(body1);
+
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: $md-text-link-color;
+    font-weight: 500;
+  }
+
+  blockquote {
+    @include md-typography(blockquote);
+  }
+
+  mark {
+    background-color: #f4ff81;
+  }
+
+  dt {
+    font-weight: 700;
+  }
+
+  address {
+    @include md-typography(caption);
+
+    font-style: normal;
+  }
+
+  ul, ol {
+    @include md-typography(body1);
+  }
+}
