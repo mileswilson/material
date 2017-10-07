@@ -1,8 +1,0 @@
-// Shadow
-@import "./mixins";
-
-@for $z-value from 0 through 24 {
-  .shadow-z#{$z-value} {
-    @include md-shadow($z-value);
-  }
-}
