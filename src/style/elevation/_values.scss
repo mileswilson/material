@@ -1,4 +1,4 @@
-$md-shadow-umbra-values: (
+$md-elevation-umbra-values: (
   0: "0px 0px 0px 0px",
   1: "0px 2px 1px -1px",
   2: "0px 3px 1px -2px",
@@ -26,7 +26,7 @@ $md-shadow-umbra-values: (
   24: "0px 11px 15px -7px"
 ) !default;
 
-$md-shadow-penumbra-values: (
+$md-elevation-penumbra-values: (
   0: "0px 0px 0px 0px",
   1: "0px 1px 1px 0px",
   2: "0px 2px 2px 0px",
@@ -54,7 +54,7 @@ $md-shadow-penumbra-values: (
   24: "0px 24px 38px 3px"
 ) !default;
 
-$md-shadow-ambient-values: (
+$md-elevation-ambient-values: (
   0: "0px 0px 0px 0px",
   1: "0px 1px 3px 0px",
   2: "0px 1px 5px 0px",

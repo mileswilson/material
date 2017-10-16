@@ -1,0 +1,57 @@
+@mixin md-typography-base {
+  font-family: $md-typography-font-family;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin md-typography($style) {
+  $style-props: map-get($md-typography-styles, $style);
+
+  @if not map-has-key($md-typography-styles, $style) {
+    @error "Invalid style specified! Choose one of #{map-keys($md-typography-styles)}";
+  }
+
+  @include md-typography-base;
+
+  font-size: map-get($style-props, font-size);
+  font-weight: #{map-get($style-props, font-weight)};
+  letter-spacing: map-get($style-props, letter-spacing);
+  line-height: map-get($style-props, line-height);
+  text-decoration: map-get($style-props, text-decoration);
+  text-transform: map-get($style-props, text-transform);
+}
+
+// Element must be `display: block` or `display: inline-block` for this to work.
+@mixin md-typography-truncate {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* stylelint-disable order/properties-order */
+@mixin md-typography-icon($font-size: 24px) {
+  display: inline-block;
+  font-family: "Material Icons";
+  font-size: $font-size;  /* Preferred icon size */
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+/* stylelint-enable */
