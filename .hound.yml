@@ -5,4 +5,4 @@ scss:
 
 stylelint:
   enabled: true
-  config_file: .stylelintrc.yml
+  config_file: .stylelintrc.json
