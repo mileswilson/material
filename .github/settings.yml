@@ -62,7 +62,7 @@ labels:
     color: 777777
   - name: has-pr
     color: 777777
-  - name: help-wanted
+  - name: help wanted
     color: 128A0C
   - name: Infrastructure
     color: 000000
@@ -70,7 +70,7 @@ labels:
     color: F0DB4F
   - name: meta
     color: 000000
-  - name: needs-review
+  - name: needs review
     color: FBCA04
   - name: on-hold
     color: FBCA04
