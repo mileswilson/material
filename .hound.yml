@@ -2,4 +2,8 @@ fail_on_violations: true
 
 stylelint:
   enabled: true
-  config_file: .stylelintrc
+  config_file: .stylelintrc.json
+
+scss:
+  enabled: false
+
