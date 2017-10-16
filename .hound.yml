@@ -1,5 +1,8 @@
 fail_on_violations: true
 
+scss:
+  enabled: false
+
 stylelint:
   enabled: true
-  config_file: .stylelintrc
+  config_file: .stylelintrc.yml
